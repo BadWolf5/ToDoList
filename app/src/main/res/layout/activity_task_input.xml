@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="325dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#809fff"
+    android:padding="20dp"
+    tools:context=".TaskInput">
+
+
+    <TextView
+        android:id="@+id/addTaskLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Add New Task"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/addTaskLabel"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/white_corner_bg"
+        android:hint="'Water the plants'"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/dueLabel"
+        android:text="Due date:"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/dateButton"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/dueLabel"
+        android:layout_toRightOf="@id/chkBoxDate"
+        android:text="20/20/2020" />
+
+    <CheckBox
+        android:id="@+id/chkBoxDate"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/dueLabel"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:id="@+id/addListLabel"
+        android:text="Add to list :"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/chkBoxDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:id="@+id/chkBoxList"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/addListLabel"
+        android:layout_marginTop="5dp" />
+
+    <Spinner
+        android:id="@+id/listSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@+id/addListLabel"
+        android:layout_marginTop="17dp"
+        android:layout_toRightOf="@id/chkBoxList"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/Addbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listSpinner"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="Add" />
+
+</RelativeLayout>
